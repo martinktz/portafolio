@@ -28,7 +28,6 @@ export class InformacionService {
   carga_sobre_nosotros() {
     this.http.get( this.url_equipo )
       .subscribe( data => {
-        console.log(data.json())
         this.equipo = data.json();
         this.cargada_sobre_nosotros = true;
       })
