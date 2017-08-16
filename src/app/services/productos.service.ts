@@ -6,10 +6,16 @@ export class ProductosService {
 
   productos:any = [];
   urlProdix:string="https://paginaweb-9ca1f.firebaseio.com/productos_idx.json";
+  urlProducto:string="https://paginaweb-9ca1f.firebaseio.com/productos/";
   cargando_productos:boolean=true;
 
   constructor( public http: Http ) {
      this.cargar_Productos();
+  }
+
+  cargar_Producto(id:string ) {
+    return this.http.get( `${this.urlProducto}${id}.json`)
+
   }
 
   cargar_Productos() {
