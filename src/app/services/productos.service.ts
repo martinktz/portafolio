@@ -17,9 +17,9 @@ export class ProductosService {
 
       this.http.get( this.urlProdix )
         .subscribe(data => {
-        console.log( data.json() )
-        this.productos= data.json();
-      })
+        //console.log( data.json() )
+        this.productos= data.json();}
+        )
         this.cargando_productos=false;
 
   }
